@@ -1,0 +1,130 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tikz}
+
+
+\usetheme{DEUFPB}
+
+% Descomente as linhas abaixo para ativar slides intermediários (início de Seção e Subseção)
+
+% \newcommand{\interludeTitle}{Estamos aqui!}
+% \AtBeginSection[] {
+%     \frame{
+% 	\frametitle{\interludeTitle}
+%       \begin{multicols}{2}
+%         \tableofcontents[
+%             currentsection,
+%             sectionstyle=show/shaded,
+%             ]
+% 	  \end{multicols}
+%     }
+% }
+
+% \AtBeginSubsection[] {
+% 	  \frame{
+% 		\frametitle{\interludeTitle}
+% 		\begin{multicols}{2}
+%         \tableofcontents[
+%             currentsubsection,
+%             subsectionstyle=show/shaded,
+%             ]
+% 		\end{multicols}
+% 	  }
+% }
+
+
+% Talk date
+% Uncomment this to define a presentation date distinct from \today
+% \def\mydate{20 Feb 2000}
+
+% Preamble
+\title[Título]{Título}
+\subtitle{Conferência}
+\author[autor]{\texorpdfstring{Prof(a). Dr(a). Fulano(a) de Tal\\\url{email@de.ufpb.br}}{Fulano(a) de Tal}}
+
+% Body
+\begin{document}
+    
+    
+    {
+        \setbeamertemplate{footline}{}
+        \setbeamertemplate{navigation symbols}{}
+        \frame{
+            \titlepage
+        }
+    }
+    
+    \setcounter{framenumber}{0}
+
+    % TOC
+    \frame{
+        \frametitle{Sumário}
+        % \begin{multicols}{2}
+        \tableofcontents
+        % \end{multicols}
+    }
+
+
+
+    \section{Introdução}
+
+    \frame{
+        \frametitle{Sobre o Departamento}
+        \begin{block}{Fundação}
+            O Curso de Bacharelado em Estatística foi criado no ano 2000, formando a primeira turma em 2004.1.
+        \end{block}
+        \begin{itemize}
+            \item O Programa de Mestrado em Modelos de Decisão e Saúde foi fundado no ano de 2009
+            \item O Programa de Doutorado em Modelos de Decisão e Saúde no ano de 2012
+        \end{itemize}
+    }
+
+    
+    \section{Seção}
+
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+    \subsection{Subseção}
+
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+
+    
+    \subsection{Outra Subseção}
+
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+    
+    \section{Conclusões}
+    
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+    
+    % \section{Agradecimentos}
+    
+    % \frame{
+    %     \frametitle{Generic slide}
+    %     \framesubtitle{A bit more information about this}
+    %     %More content goes here
+    % }
+
+    \section{}
+    \frame[plain]{\titlepage}
+\end{document}
+

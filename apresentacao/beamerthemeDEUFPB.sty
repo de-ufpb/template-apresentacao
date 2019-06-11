@@ -1,0 +1,119 @@
+\mode<presentation>
+
+\usecolortheme{default}
+\usecolortheme{default}
+\useinnertheme{default}
+\useoutertheme{default}
+
+% Colors
+\definecolor{bluecern}{HTML}{0053A1}
+\setbeamercolor{normal text}{fg=bluecern, bg=white}
+\setbeamercolor{frametitle}{fg=bluecern, bg=white}
+\setbeamercolor{section in toc}{fg=bluecern, bg=white}
+\setbeamercolor{title}{fg=bluecern, bg=white}
+\setbeamercolor{inverted normal text}{fg=white, bg=bluecern}
+\setbeamercolor{itemize item}{fg=bluecern}
+\setbeamercolor{itemize subitem}{fg=bluecern}
+\setbeamercolor{itemize subsubitem}{fg=bluecern}
+\setbeamercolor{enumerate item}{fg=bluecern}
+\setbeamercolor{enumerate subitem}{fg=bluecern}
+\setbeamercolor{caption name}{fg=bluecern}
+\setbeamercolor{block title}{fg=bluecern, bg=gray!30}
+\setbeamercolor{block body}{fg=bluecern, bg=gray!10}
+\setbeamercolor{block title alerted}{bg=gray!30}
+\setbeamercolor{block body alerted}{bg=gray!10}
+
+% Fonts
+\usefonttheme{structurebold}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+% Title page
+\setbeamertemplate{title page}{
+    \begin{center}
+        \vspace{16px}
+        { \Huge \textbf{\inserttitle} }
+        
+        \vfill
+        \vspace{8px}
+        { \Large \insertsubtitle }
+        \vfill
+        \vspace{16px}
+        \insertauthor
+        \vfill
+        
+        % \talkdate 
+        \vfill
+        \begin{columns}
+            \column{.3\textwidth}
+            \column{.2\textwidth}
+                \begin{figure}
+                    \includegraphics[scale=0.35]{logos/logo-ufpb-dark.png} \\
+                    {\small \textbf{~~www.ufpb.br}}
+                \end{figure}
+            \column{.2\textwidth}
+                \vspace{16px}
+                \begin{figure}
+                    \includegraphics[scale=0.35]{logos/logoDEg-preto.png} \vfill
+                    {\small \textbf{www.de.ufpb.br}}
+                \end{figure}
+            \column{.3\textwidth}
+        \end{columns}
+        \vfill
+    \end{center}
+}
+
+% Frametitle
+\setbeamertemplate{frametitle}{
+    \begin{columns}
+    \column{.9\textwidth}
+    \insertframetitle
+    \column{.1\textwidth}
+        \vspace{2px}
+        \includegraphics[scale=0.35]{logos/logoDEg-preto.png}
+    \end{columns}
+}
+
+% Footline
+\setbeamerfont{footline}{size=\large}
+\setbeamertemplate{footline}{
+    \begin{beamercolorbox}[ht=20px, center]{inverted normal text}
+        \begin{columns}
+            \column{.8\textwidth}
+                \insertshorttitle
+            \column{.02\textwidth}
+                \insertpagenumber
+        \end{columns}
+        \vspace{4px}
+    \end{beamercolorbox}
+}
+
+\newcommand{\talkdate}{
+  \@ifundefined{mydate}
+	{
+	\today
+	}
+	{
+	\mydate
+	}
+}
+
+\newcommand{\cernSplashWhite}{
+    % CERN ending slide with blue logo and web page
+    \bgroup
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamercolor{background canvas}{bg=white}
+    \frame[plain]{
+        \centering
+        \vspace{10px}
+        \begin{figure}
+            \includegraphics[scale=.61]{logos/logo-ufpb-dark.png} \\
+            {\Large \textbf{~~www.ufpb.br}}
+        \end{figure}
+    }
+    \egroup
+}
+
+\mode
+<all>
