@@ -1,0 +1,141 @@
+\mode<presentation>
+
+\usepackage{tikz}
+
+\usecolortheme{default}
+\usecolortheme{default}
+\useinnertheme{default}
+\useoutertheme{default}
+
+% Colors
+\definecolor{waterde}{HTML}{080C3C}
+\definecolor{bluede}{HTML}{001132}
+\definecolor{subbluede}{HTML}{083765}
+\definecolor{orangede}{HTML}{FF0007}
+\definecolor{yellowde}{HTML}{FFFC00}
+\setbeamercolor{normal text}{fg=white, bg=subbluede}
+\setbeamercolor{normal text in title page}{fg=white, bg=waterde}
+\setbeamercolor{frametitle}{fg=white, bg=bluede}
+\setbeamercolor{section in toc}{fg=white, bg=bluede}
+\setbeamercolor{subsection in toc}{fg=white, bg=bluede}
+\setbeamercolor{title}{fg=bluede, bg=white}
+\setbeamercolor{inverted normal text}{fg=white, bg=bluede}
+\setbeamercolor{itemize item}{fg=orangede}
+\setbeamercolor{itemize subitem}{fg=yellowde}
+\setbeamercolor{itemize subsubitem}{fg=bluede}
+\setbeamercolor{enumerate item}{fg=orangede}
+\setbeamercolor{enumerate subitem}{fg=yellowde}
+\setbeamercolor{enumerate subsubitem}{fg=bluede}
+\setbeamercolor{caption name}{fg=bluede}
+\setbeamercolor{block title}{fg=white, bg=bluede}
+\setbeamercolor{block body}{fg=white, bg=waterde}
+\setbeamercolor{block title alerted}{fg=white, bg=bluede}
+\setbeamercolor{block body alerted}{fg=white, bg=subbluede}
+
+% Fonts
+\usefonttheme{structurebold}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+% Title page
+\setbeamertemplate{title page}{
+ \begin{picture}(0,0)
+
+            \put(-30,-240){%
+                \includegraphics[width=\paperwidth]{logos/marca-dagua.png}
+            }
+
+            
+
+            \end{picture}
+    \begin{center}
+    \begin{columns}
+        \column{.9\textwidth}
+        \vspace{16px}
+        { \Huge \textbf{\inserttitle} }
+        
+        \vfill
+        \vspace{8px}
+        { \Large \insertsubtitle }
+        \vfill
+        \vspace{16px}
+        \insertauthor
+        \vfill
+        { \small \url{www.de.ufpb.br} }
+        \vfill
+        \column{.1\textwidth}
+        % \begin{figure}
+        %     \includegraphics[scale=0.2]{logos/marca-dagua-azul.jpg}
+        % \end{figure}
+    \end{columns}
+        
+        % \talkdate 
+        % \vfill
+        % \begin{columns}
+        %     \column{.3\textwidth}
+        %     % \column{.2\textwidth}
+        %     %     \vspace{11px}
+        %     %     \begin{figure}
+        %     %         \includegraphics[scale=0.35]{logos/logo-ufpb-dark.png} \\
+        %     %         {\small \textbf{~~www.ufpb.br}}
+        %     %     \end{figure}
+        %     \column{.4\textwidth}
+        %     \column{.3\textwidth}
+        % \end{columns}
+    \end{center}
+}
+
+% Frametitle
+\setbeamertemplate{frametitle}{
+    \begin{columns}
+    \column{.95\textwidth}
+    \textbf{\insertframetitle}
+    \column{.05\textwidth}
+        \vspace{2px}
+        \includegraphics[scale=0.15]{logos/logo-branca.png}
+    \end{columns}
+}
+
+% Footline
+\setbeamerfont{footline}{size=\large}
+\setbeamertemplate{footline}{
+    \begin{beamercolorbox}[ht=20px, center]{inverted normal text}
+        \begin{columns}
+            \column{.8\textwidth}
+                \insertshorttitle
+            \column{.02\textwidth}
+                \insertpagenumber
+        \end{columns}
+        \vspace{6px}
+    \end{beamercolorbox}
+}
+
+\newcommand{\talkdate}{
+  \@ifundefined{mydate}
+	{
+	\today
+	}
+	{
+	\mydate
+	}
+}
+
+\newcommand{\cernSplashWhite}{
+    % CERN ending slide with blue logo and web page
+    \bgroup
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamercolor{background canvas}{bg=white}
+    \frame[plain]{
+        \centering
+        \vspace{10px}
+        \begin{figure}
+            \includegraphics[scale=.61]{logos/logo-ufpb-dark.png} \\
+            {\Large \textbf{~~www.ufpb.br}}
+        \end{figure}
+    }
+    \egroup
+}
+
+\mode
+<all>
