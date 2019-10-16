@@ -40,51 +40,68 @@
 
 % Title page
 \setbeamertemplate{title page}{
- \begin{picture}(0,0)
+    \begin{picture}(0,0)
 
-            \put(-30,-240){%
-                \includegraphics[width=\paperwidth]{logos/marca-dagua.png}
-            }
+        \put(-30,-300){%
+            \includegraphics[width=\paperwidth]{logos/bumerangue-azul.png}
+        }
 
-            
-
-            \end{picture}
+        \put(250,-200){%
+            \includegraphics[width=0.4\paperwidth]{logos/logo-branca-nome.png}
+        }
+        \put(215,-180){%
+            { \LARGE \textbf{UFPB} }
+        }
+        
+        \put(-15,10){
+            \begin{tikzpicture}
+                \draw[line width=1 mm] (0,0) -- (10,0);
+            \end{tikzpicture}
+        }
+        
+        % \put(-15,-15){
+        %     { \Huge \textbf{\inserttitle} }
+        % }
+    \end{picture}
+    % \vfill
     \begin{center}
     \begin{columns}
-        \column{.9\textwidth}
-        \vspace{16px}
-        { \Huge \textbf{\inserttitle} }
-        
-        \vfill
-        \vspace{8px}
-        { \Large \insertsubtitle }
-        \vfill
-        \vspace{16px}
-        \insertauthor
-        \vfill
-        { \small \url{www.de.ufpb.br} }
+        \column{.9\textwidth}{
+            \vfill
+            { \Huge \textbf{\inserttitle} }
+            
+            \vfill
+            \vspace{16px}
+            { \LARGE \insertsubtitle }
+            \vfill
+            \vspace{20px}
+            \insertauthor
+            \vfill
+            { \small \url{www.de.ufpb.br} }
+        }
         \vfill
         \column{.1\textwidth}
-        % \begin{figure}
-        %     \includegraphics[scale=0.2]{logos/marca-dagua-azul.jpg}
-        % \end{figure}
     \end{columns}
-        
-        % \talkdate 
-        % \vfill
-        % \begin{columns}
-        %     \column{.3\textwidth}
-        %     % \column{.2\textwidth}
-        %     %     \vspace{11px}
-        %     %     \begin{figure}
-        %     %         \includegraphics[scale=0.35]{logos/logo-ufpb-dark.png} \\
-        %     %         {\small \textbf{~~www.ufpb.br}}
-        %     %     \end{figure}
-        %     \column{.4\textwidth}
-        %     \column{.3\textwidth}
-        % \end{columns}
     \end{center}
 }
+
+\newcommand{\whiteFrame}{
+    % CERN ending slide with blue logo and web page
+    \bgroup
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamercolor{background canvas}{bg=white}
+    \frame[plain]{
+        \centering
+        \vspace{10px}
+        \begin{figure}
+            \includegraphics[scale=.61]{logos/logo-ufpb-dark.png} \\
+            {\Large \textbf{~~www.ufpb.br}}
+        \end{figure}
+    }
+    \egroup
+}
+
+
 
 % Frametitle
 \setbeamertemplate{frametitle}{
