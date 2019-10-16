@@ -35,36 +35,82 @@
 \usepackage[T1]{fontenc}
 
 % Title page
+% \setbeamertemplate{title page}{
+%     \begin{center}
+%         \vspace{16px}
+%         { \Huge \textbf{\inserttitle} }
+        
+%         \vfill
+%         \vspace{8px}
+%         { \Large \insertsubtitle }
+%         \vfill
+%         \vspace{16px}
+%         \insertauthor
+%         \vfill
+        
+%         % \talkdate 
+%         % \vfill
+%         % \begin{columns}
+%         %     \column{.3\textwidth}
+%         %     % \column{.2\textwidth}
+%         %     %     \vspace{11px}
+%         %     %     \begin{figure}
+%         %     %         \includegraphics[scale=0.35]{logos/logo-ufpb-dark.png} \\
+%         %     %         {\small \textbf{~~www.ufpb.br}}
+%         %     %     \end{figure}
+%         %     \column{.4\textwidth}
+%         \begin{figure}
+%             \includegraphics[scale=0.4,trim={3.2cm 0 2.7cm 0},clip]{logos/logo-texto.png} 
+%         \end{figure}
+%         {\enspace \small \textbf{www.de.ufpb.br} }
+%         %     \column{.3\textwidth}
+%         % \end{columns}
+%     \end{center}
+% }
+
 \setbeamertemplate{title page}{
+    \begin{picture}(0,0)
+
+        \put(-30,-300){%
+            \includegraphics[width=\paperwidth]{logos/bumerangue-branco.png}
+        }
+
+        \put(205,-215){%
+            \includegraphics[width=0.4\paperwidth]{logos/logo-texto.png}
+        }
+        \put(380,-210){%
+            \includegraphics[width=0.07\paperwidth]{logos/logo-ufpb.png}
+        }
+        
+        \put(-15,10){
+            \begin{tikzpicture}
+                \draw[line width=1 mm] (0,0) -- (10,0);
+            \end{tikzpicture}
+        }
+        
+        % \put(-15,-15){
+        %     { \Huge \textbf{\inserttitle} }
+        % }
+    \end{picture}
+    % \vfill
     \begin{center}
-        \vspace{16px}
-        { \Huge \textbf{\inserttitle} }
-        
+    \begin{columns}
+        \column{.9\textwidth}{
+            \vfill
+            { \Huge \textbf{\inserttitle} }
+            
+            \vfill
+            \vspace{16px}
+            { \LARGE \insertsubtitle }
+            \vfill
+            \vspace{20px}
+            \insertauthor
+            \vfill
+            { \small \url{www.de.ufpb.br} }
+        }
         \vfill
-        \vspace{8px}
-        { \Large \insertsubtitle }
-        \vfill
-        \vspace{16px}
-        \insertauthor
-        \vfill
-        
-        % \talkdate 
-        % \vfill
-        % \begin{columns}
-        %     \column{.3\textwidth}
-        %     % \column{.2\textwidth}
-        %     %     \vspace{11px}
-        %     %     \begin{figure}
-        %     %         \includegraphics[scale=0.35]{logos/logo-ufpb-dark.png} \\
-        %     %         {\small \textbf{~~www.ufpb.br}}
-        %     %     \end{figure}
-        %     \column{.4\textwidth}
-        \begin{figure}
-            \includegraphics[scale=0.4,trim={3.2cm 0 2.7cm 0},clip]{logos/logo-texto.png} 
-        \end{figure}
-        {\enspace \small \textbf{www.de.ufpb.br} }
-        %     \column{.3\textwidth}
-        % \end{columns}
+        \column{.1\textwidth}
+    \end{columns}
     \end{center}
 }
 
