@@ -11,7 +11,7 @@
 \definecolor{orangede}{HTML}{FF0007}
 \definecolor{yellowde}{HTML}{FFFC00}
 \setbeamercolor{normal text}{fg=bluede, bg=white}
-\setbeamercolor{frametitle}{fg=bluede, bg=white}
+% \setbeamercolor{frametitle}{fg=bluede, bg=white}
 \setbeamercolor{section in toc}{fg=bluede, bg=white}
 \setbeamercolor{subsection in toc}{fg=subbluede, bg=white}
 \setbeamercolor{title}{fg=bluede, bg=white}
@@ -114,56 +114,6 @@
     \end{center}
 }
 
-% Frametitle
-\setbeamertemplate{frametitle}{
-    \begin{columns}
-    \column{.95\textwidth}
-    \textbf{\insertframetitle}
-    \column{.05\textwidth}
-        \vspace{2px}
-        \includegraphics[scale=0.15]{logos/logo-arte.png}
-    \end{columns}
-}
-
-% Footline
-\setbeamerfont{footline}{size=\large}
-\setbeamertemplate{footline}{
-    \begin{beamercolorbox}[ht=20px, center]{inverted normal text}
-        \begin{columns}
-            \column{.8\textwidth}
-                \insertshorttitle
-            \column{.02\textwidth}
-                \insertpagenumber
-        \end{columns}
-        \vspace{6px}
-    \end{beamercolorbox}
-}
-
-\newcommand{\talkdate}{
-  \@ifundefined{mydate}
-	{
-	\today
-	}
-	{
-	\mydate
-	}
-}
-
-\newcommand{\cernSplashWhite}{
-    % CERN ending slide with blue logo and web page
-    \bgroup
-    \setbeamertemplate{navigation symbols}{}
-    \setbeamercolor{background canvas}{bg=white}
-    \frame[plain]{
-        \centering
-        \vspace{10px}
-        \begin{figure}
-            \includegraphics[scale=.61]{logos/logo-ufpb-dark.png} \\
-            {\Large \textbf{~~www.ufpb.br}}
-        \end{figure}
-    }
-    \egroup
-}
 
 \mode
 <all>

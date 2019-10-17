@@ -42,6 +42,7 @@
 \usetheme{branco} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{frame-commands.tex}
 
 % Talk date
 % Uncomment this to define a presentation date distinct from \today
@@ -67,8 +68,7 @@
     \setcounter{framenumber}{0}
 
     % TOC
-    \frame{
-        \frametitle{Sumário}
+    \whiteFrame{Sumário}{
         % \begin{multicols}{2}
         \tableofcontents
         % \end{multicols}
@@ -78,8 +78,7 @@
 
     \section{Introdução}
 
-    \frame{
-        \frametitle{Sobre o Departamento}
+    \whiteFrame{Sobre o Departamento}{
         \begin{block}{Fundação}
             O Curso de Bacharelado em Estatística foi criado no ano 2000, formando a primeira turma em 2004.1.
         \end{block}
@@ -94,11 +93,26 @@
         \end{itemize}
     }
 
+    % \frame{
+    %     \frametitle{Sobre o Departamento}
+    %     \begin{block}{Fundação}
+    %         O Curso de Bacharelado em Estatística foi criado no ano 2000, formando a primeira turma em 2004.1.
+    %     \end{block}
+    %     \begin{itemize}
+    %         \item Um item
+    %         \begin{itemize}
+    %             \item Um sub-item
+    %             \begin{itemize}
+    %                 \item Um sub-sub-item
+    %             \end{itemize}
+    %         \end{itemize}
+    %     \end{itemize}
+    % }
+
     
     \section{Seção}
 
-    \frame{
-        \frametitle{Generic slide}
+    \blueFrame{Generic slide}{
         \begin{enumerate}
             \item Um item
             \begin{enumerate}[a.]
@@ -114,27 +128,54 @@
     }
     \subsection{Subseção}
 
-    \frame{
-        \frametitle{Generic slide}
-        \framesubtitle{A bit more information about this}
-        %More content goes here
+    \blueCampusFrame{Generic slide}{
+        \begin{enumerate}
+            \item Um item
+            \begin{enumerate}[a.]
+                \item Um sub-item
+                \begin{enumerate}[i.]
+                    \item Um sub-sub-item
+                    \item Outro sub-sub-item
+                \end{enumerate}
+                \item Outro sub-item
+            \end{enumerate}
+            \item Outro item
+        \end{enumerate}
     }
 
     
     \subsection{Outra Subseção}
 
-    \frame{
-        \frametitle{Generic slide}
-        \framesubtitle{A bit more information about this}
-        %More content goes here
+    \blueFrame{Generic slide}{
+        \begin{enumerate}
+            \item Um item
+            \begin{enumerate}[a.]
+                \item Um sub-item
+                \begin{enumerate}[i.]
+                    \item Um sub-sub-item
+                    \item Outro sub-sub-item
+                \end{enumerate}
+                \item Outro sub-item
+            \end{enumerate}
+            \item Outro item
+        \end{enumerate}
     }
     
     \section{Conclusões}
     
-    \frame{
-        \frametitle{Generic slide}
-        \framesubtitle{A bit more information about this}
-        %More content goes here
+    \whiteFrame{Generic slide}{
+        \begin{enumerate}
+            \item Um item
+            \begin{enumerate}[a.]
+                \item Um sub-item
+                \begin{enumerate}[i.]
+                    \item Um sub-sub-item
+                    \item Outro sub-sub-item
+                \end{enumerate}
+                \item Outro sub-item
+            \end{enumerate}
+            \item Outro item
+        \end{enumerate}
     }
     
     % \section{Agradecimentos}
