@@ -60,6 +60,53 @@
     \egroup
 }
 
+\newcommand{\whiteCampusFrame}[2]{
+    \bgroup
+    \usebackgroundtemplate{\includegraphics[width=\paperwidth]{logos/bumerangue-branco.png}}
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{footline}{whiteFrame}
+    \setbeamercolor{background canvas}{bg=white}
+    \setbeamercolor{normal text}{fg=bluede, bg=white}
+    \setbeamercolor{frametitle}{fg=bluede, bg=white}
+    \setbeamercolor{section in toc}{fg=bluede, bg=white}
+    \setbeamercolor{subsection in toc}{fg=subbluede, bg=white}
+    \setbeamercolor{title}{fg=bluede, bg=white}
+    \setbeamercolor{inverted normal text}{fg=white, bg=bluede}
+    \setbeamercolor{itemize item}{fg=orangede}
+    \setbeamercolor{itemize subitem}{fg=subbluede}
+    \setbeamercolor{itemize subsubitem}{fg=bluede}
+    \setbeamercolor{enumerate item}{fg=orangede}
+    \setbeamercolor{enumerate subitem}{fg=subbluede}
+    \setbeamercolor{enumerate subsubitem}{fg=bluede}
+    \setbeamercolor{caption name}{fg=bluede}
+    \setbeamercolor{block title}{fg=white, bg=bluede}
+    \setbeamercolor{block body}{fg=white, bg=subbluede}
+    \setbeamercolor{block title alerted}{fg=white, bg=bluede}
+    \setbeamercolor{block body alerted}{fg=white, bg=subbluede}
+    \setbeamercolor{itemize/enumerate body}{fg=bluede}
+    \setbeamercolor{itemize/enumerate subbody}{fg=bluede}
+    \setbeamercolor{itemize/enumerate subsubbody}{fg=bluede}
+    \frame[plain]{
+        \frametitle{#1}
+        \begin{backgroundblock}{-8px}{250px}
+        \begin{picture}(0,0)
+
+            \put(395,0){
+                \includegraphics[width=0.12\paperwidth]{logos/logo-arte.png}
+            }
+            
+            \put(0,8){
+                \begin{tikzpicture}
+                    \draw[line width=1 mm, color=bluede] (0,0) -- (13.6,0);
+                \end{tikzpicture}
+            }
+        \end{picture}
+        \end{backgroundblock}
+        #2
+    }
+    \egroup
+}
+
 \newcommand{\blueFrame}[2]{
     \bgroup
     \definecolor{waterde}{HTML}{080C3C}
